@@ -17,5 +17,17 @@ async def on_ready():
     print ("with the ID: " + bot.user.id)
 @bot.command(pass_context=True)
 async def ping(ctx):
-    await bot.say("AAAAAAAAAAAAAAAAAAAAA IM ON FIRE SOMEONE PUT ME OUT")
+    await bot.say("You're not going to be king")
+
+author = ""
+fullSet = {}
+@bot.command(pass_context=True)
+async def chatLogs(ctx):
+    logs = yield from client.logs_from(channel)
+    for message in logs:
+            fullSet.add(message.author)
+                yield from client.edit_message(message, 'goodbye')
+    
+    print fullSet
+
 bot.run(TOKEN)
