@@ -5,7 +5,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
 
-TOKEN = "NTI1ODYxODgzNTQ3MzUzMTA1.Dv80Bg.p_wprYnO-n55dJ4m2iWv5VBkEbQ"
+TOKEN = open("token.txt", r).read();
 
 client = discord.Client()
 
